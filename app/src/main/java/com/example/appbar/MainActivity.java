@@ -15,13 +15,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-
-        Intent intentNotes = new Intent(MainActivity.this, NotesActivity.class);
-        startActivity(intentNotes);
-
-        Intent intentSettings = new Intent(MainActivity.this, SettingsActivity.class);
-        startActivity(intentSettings);
+        //  setContentView(R.layout.activity_main);
     }
 
     @Override
@@ -36,14 +32,31 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.action_open_notes) {
-             Toast.makeText(MainActivity.this, "", Toast.LENGTH_LONG).show();
-              return true;
-        }
-        if (id == R.id.action_settings) {
-            Toast.makeText(MainActivity.this, "", Toast.LENGTH_LONG).show();
-            return true;
+            Intent intentNotes = new Intent(MainActivity.this, NotesActivity.class);
+            startActivity(intentNotes);
         }
 
+        if (id == R.id.action_settings) {
+            Intent intentSettings = new Intent(MainActivity.this, SettingsActivity.class);
+            startActivity(intentSettings);
+        }
+
+        if (id == R.id.action_open_check) {
+            Intent intentSettings = new Intent(MainActivity.this, CheckBoxActivity.class);
+            startActivity(intentSettings);
+        }
+
+        if (id == R.id.action_open_calendar) {
+            Intent intentSettings = new Intent(MainActivity.this, CalendarActivity.class);
+            startActivity(intentSettings);
+        }
+
+        if (id == R.id.action_open_spinner) {
+            Intent intentSettings = new Intent(MainActivity.this, SpinnerActivity.class);
+            startActivity(intentSettings);
+        }
         return super.onOptionsItemSelected(item);
     }
+
+
 }
