@@ -1,23 +1,22 @@
 package com.example.appbar;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toast;
-import android.widget.Toolbar;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 
 public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        //  setContentView(R.layout.activity_main);
+            setContentView(R.layout.activity_main);
+               Toolbar myToolbar = findViewById(R.id.my_toolbar);
+                  setSupportActionBar(myToolbar);
     }
 
     @Override
